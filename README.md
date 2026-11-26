@@ -144,9 +144,15 @@ cd ProEmiCalculator
 - **Unit tests** (`app/src/test/`) — EMI calculation, part-payment validation, optimizer ranking, portfolio aggregation, theme parsing, loan profile serialization.
 - **Instrumented tests** (`app/src/androidTest/`) — Compose UI tests covering app launch, navigation, input, chips, part payments, portfolio Pro gate, theme selection.
 
-## OpenSpec
+## OpenSpec (Spec-Driven Development)
 
-This project uses [OpenSpec](https://github.com/Fission-AI/OpenSpec) for spec-driven development. Active changes and specs live under `openspec/`.
+This project uses [OpenSpec](https://github.com/Fission-AI/OpenSpec) for spec-driven development. Every feature is planned, specified, and tracked through OpenSpec artifacts before implementation:
+
+- **Specs** (`openspec/specs/`) — durable capability specifications with requirements and scenarios (e.g., `emi-calculation`, `part-payments`, `theme`, `multi-loan-portfolio`).
+- **Changes** (`openspec/changes/`) — proposed changes with proposal, design, delta specs, and task checklists.
+- **Archived changes** (`openspec/changes/archive/`) — completed and verified changes.
+
+The workflow: explore an idea → propose a change → write specs and design → implement tasks → verify (unit + UI tests) → archive. This ensures every feature has documented requirements, a technical design, and a tracked implementation checklist before any code is written.
 
 ## License
 
